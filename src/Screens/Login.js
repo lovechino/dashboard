@@ -1,13 +1,18 @@
 import './css/Login.css'
 import schoolimg from '../Img/—Pngtree—school campus cartoon school student_3806088.png'
 import { useState } from 'react'
-import { userLogin } from '../API/User'
+import { getData, userLogin } from '../API/User'
+import axios from 'axios'
 const Login = ()=>{
     const[username,setUsername] = useState('')
     const[password,setPassword] = useState('')
-    const onSubmit = ()=>{
+    const onSubmit = async ()=>{
         // console.log({username:username,password:password})
-        const user = userLogin({username:username,password:password})
+        // const user = userLogin({username:username,password:password})
+        // console.log(user)
+        // const stu = await getData()
+        // console.log(stu)
+        const user = await userLogin({username:username,password:password})
         console.log(user)
     }
     return(

@@ -1,5 +1,12 @@
-import axios from "./config"
+import axios from "axios"
 
-export const userLogin = async (data)=>{
-    return (await axios.post('/user/login',data)).data
+const baseUrl = 'https://data-school.onrender.com/api'
+
+export const getData =  ()=>{
+    return axios.get(`${baseUrl}/students`).then(res=>res.data).catch(err=>console.log(err.message))
+}
+
+
+export const userLogin = (data)=>{
+    return axios.post(`${baseUrl}/user/login`,data).then(res=>res.data).catch(err=>console.log(err.message))
 }
