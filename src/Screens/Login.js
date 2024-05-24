@@ -1,11 +1,14 @@
 import './css/Login.css'
 import schoolimg from '../Img/—Pngtree—school campus cartoon school student_3806088.png'
 import { useState } from 'react'
+import { userLogin } from '../API/User'
 const Login = ()=>{
     const[username,setUsername] = useState('')
     const[password,setPassword] = useState('')
     const onSubmit = ()=>{
-        console.log({username:username,password:password})
+        // console.log({username:username,password:password})
+        const user = userLogin({username:username,password:password})
+        console.log(user)
     }
     return(
         <div className="login-form">
