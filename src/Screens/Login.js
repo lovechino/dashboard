@@ -19,7 +19,7 @@ const Login = ()=>{
                 <label className="form_label">Password</label>
                 <input className="form_input" type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)}/>
             </div>
-            <button className='login-button'>Login</button>
+            <button className='login-button' onClick={()=>onSubmit()}>Login</button>
             </div>
         </div>
     )
