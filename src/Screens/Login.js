@@ -1,0 +1,28 @@
+import './css/Login.css'
+import schoolimg from '../Img/—Pngtree—school campus cartoon school student_3806088.png'
+import { useState } from 'react'
+const Login = ()=>{
+    const[username,setUsername] = useState('')
+    const[password,setPassword] = useState('')
+    const onSubmit = ()=>{
+        console.log({username:username,password:password})
+    }
+    return(
+        <div className="login-form">
+            <img className='img-school' src={schoolimg}/>
+            <div className='input-form'>
+            <div className="form_row">
+                <label className="form_label">Username</label>
+                <input className="form_input" type="text" placeholder="Username" value={username} onChange={e=>setUsername(e.target.value)}/>
+            </div>
+            <div className="form_row">
+                <label className="form_label">Password</label>
+                <input className="form_input" type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)}/>
+            </div>
+            <button className='login-button'>Login</button>
+            </div>
+        </div>
+    )
+}
+
+export default Login

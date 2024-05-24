@@ -1,0 +1,49 @@
+.login-form {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Background color */
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.form_row{
+    padding: 8px 0;
+    display: flex;
+
+}
+
+.form_label {
+    max-width: 90px;
+
+}
+
+.form_input {
+    flex: 1;
+    width: 200px;;
+    
+}
+.login-button {
+    margin-left: 90px;
+    width: 100px;
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add hover effect */
+  }
+
+  .login-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+  .img-school{
+    width: 300px;
+    height: 300px;
+  }
